@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* logo */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eae0fe;
+    color: black;
+    padding: 15px 20px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+.title {
+    font-size: xx-large;
+    font-weight: bold;
+}
+.login-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: larger;
+}
+
+/* footer */
+.footer{
+    background-color: #d9ead3;
+    color:black;
+    text-align: center;
+    position: static;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+/* body */
+
+.container-position{
+    margin-top: 20px;
+}
+
+h2{
+    padding-top: 20px;
+    text-align: center;
+}
+.nav-bar{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.align-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.search-bar-nav{
+    padding-right: 20px;
+}
+
+/* thêm mới  */
+.add-form{
+    display: none;
+
+}
+.update-form{
+    display: none;
+}
+.delete-form{
+    display: none;
+}
+#add-form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 20px;
+    border: black 1px solid;
+}
+#update-form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 20px;
+    border: black 1px solid;
+}
+#delete-form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 20px;
+    border: black 1px solid;
+}
+
+.form-label-add {  
+    font-weight: 600;
+    margin-bottom: 8px;
+    padding-right: 100px;
+}
+.form-label-update{
+    font-weight: 600;
+    margin-bottom: 8px;
+    padding-right: 100px;
+}
+
+.close-add{
+    float: right;
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+}
+.close-update{
+    float: right;
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+}
+.close-delete{
+   
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+}
+
+.customBtnAdd{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;   
+}
+.customBtnUpdate{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.customBtnAdd .btnCloseForm, button{
+    border: none;
+    border-radius: 5px;
+    background-color:#007bff;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.customBtnUpdate button{
+    border: none;
+    border-radius: 5px;
+    background-color:#007bff;
+    color: white;
+    padding: 10px;
+}
+.customBtnDelete button{
+    border: none;
+    border-radius: 5px;
+    background-color:#007bff;
+    color: white;
+    padding: 10px;
+}
+
+.overlay .table-add{
+    margin-top: 25px;
+} 
+.overlay .table-update{
+    margin-top: 25px;
+} 
+
+.modal-add{
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+.modal-update{
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+.label-delete{
+    display: flex;
+    justify-content: space-evenly;
+}

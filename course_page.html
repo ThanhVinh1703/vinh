@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./src/styles/coursepage.css" />
+  </head>
+  <body>
+    <header>                             
+      <div class="logo">
+        <img
+          src="https://static.ybox.vn/2023/3/4/1677721652964-LOGO-RIKKEI-ACADEMY-2022-01.png"
+          width="200"
+          height="100"
+          alt="Logo"
+        />
+        <div class="title">HỆ THỐNG QUẢN LÝ SINH VIÊN RIKKEI</div>
+      </div>
+      <button class="logOut-btn">Đăng xuất</button>
+    </header>
+
+    <div class="container-position">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="./homepage.html">Bảng điều khiển</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./course_page.html">Quản lý khóa học</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./class_page.html">Quản lý lớp học</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./student_page.html">Quản lý sinh viên</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./account_page.html">Quản lý tài khoản</a>
+        </li>     
+      </ul>
+    </div>
+
+    <!-- trang quản trị khóa học -->
+    <h2>QUẢN LÝ KHÓA HỌC</h2>
+    <div>
+      
+      <div class="nav-bar">
+        <div class="align-left">
+          <button id="add-btn">Thêm mới</button>
+        </div>
+  
+        <div class="align-right" >
+          <div class="search-bar-nav" >
+            <button id="search-Button">Tìm kiếm</button>
+            <input
+              id="search-Input"
+              type="text"
+              
+              placeholder="Nhập từ khóa học tìm kiếm"
+            />
+          </div>
+          <div class="sort-bar">          
+            <select style="text-align: center;" id="sortByName">
+              <option selected>-Sắp xếp-</option>
+              <option value="1">Tên khóa học tăng dần</option>
+              <option value="2">Tên khóa học giảm dần</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div>
+        <table class="table table-striped">
+          <thead>
+            <th>STT&emsp;</th>
+            <th>Mã khóa học&emsp;</th>
+            <th>Tên khóa học&emsp;</th>
+            <th>Thời gian (giờ)&emsp;</th>
+            <th>Trạng thái&emsp;</th>
+            <th colspan="2">Hành động</th>
+          </thead>
+          <tbody id="tbody">
+            <!-- <tr>
+              <td>1</td>
+              <td>RA01</td>
+              <td>Khóa học 1</td>
+              <td>1000</td>
+              <td>Hoạt động</td>
+              <td>
+                <button>Sửa</button>
+                <button>Xóa</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>RA02</td>
+              <td>Khóa học 2</td>
+              <td>2000</td>
+              <td>Không hoạt động</td>
+              <td>
+                <button>Sửa</button>
+                <button>Xóa</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>RA03</td>
+              <td>Khóa học 3</td>
+              <td>1500</td>
+              <td>Hoạt động</td>
+              <td>
+                <button>Sửa</button>
+                <button>Xóa</button>
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>RA01</td>
+              <td>Khóa học 4</td>
+              <td>1000</td>
+              <td>Hoạt động</td>
+              <td>
+                <button>Sửa</button>
+                <button>Xóa</button>
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>RA01</td>
+              <td>Khóa học 5</td>
+              <td>1000</td>
+              <td>Hoạt động</td>
+              <td>
+                <button>Sửa</button>
+                <button>Xóa</button>
+              </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>RA06</td>
+              <td>Khóa học 6</td>
+              <td>1000</td>
+              <td>Hoạt động</td>
+              <td>
+                <button>Sửa</button>
+                <button>Xóa</button>
+              </td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>RA07</td>
+              <td>Khóa học 7</td>
+              <td>1000</td>
+              <td>Hoạt động</td>
+              <td>
+                <button>Sửa</button>
+                <button>Xóa</button>
+              </td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>RA01</td>
+              <td>Khóa học 8</td>
+              <td>1000</td>
+              <td>Hoạt động</td>
+              <td>
+                <button>Sửa</button>
+                <button>Xóa</button>
+              </td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>RA01</td>
+              <td>Khóa học 9</td>
+              <td>1000</td>
+              <td>Hoạt động</td>
+              <td>
+                <button>Sửa</button>
+                <button>Xóa</button>
+              </td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>RA010</td>
+              <td>Khóa học 10</td>
+              <td>1000</td>
+              <td>Hoạt động</td>
+              <td>
+                <button>Sửa</button>
+                <button>Xóa</button>
+              </td>
+            </tr>
+          </tbody> -->
+        </table>
+      </div>
+
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end">
+          <li class="page-item disabled">
+            <a class="page-link" href="#">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- THÊM MỚI LỚP HỌC -->
+    <div class="overlay add-form" id="add-form">
+      <form class="form">
+        <table class="table-add">
+          <span class="modal-add">Thêm mới khóa học</span>
+          <span class="close-add">x</span>
+          <tr>
+            <td class="form-label-add">Mã khóa học</td>
+            <td>
+              <input id="idCourse" type="text" placeholder="Nhập mã khóa học" class="form-control" name="maKhoaHoc" />
+            </td>
+          </tr>
+          <tr>
+            <td class="form-label-add">Tên khóa học</td>
+            <td>
+              <input id="nameCourse" type="text" placeholder="Nhập tên khóa học" class="form-control" name="tenKhoahoc"/>
+            </td>
+          </tr>
+          <tr>
+            <td class="form-label-add" >Thời gian</td>
+            <td>
+              <input id="timeCourse" type="text" placeholder="Nhập thời gian khóa học" class="form-control" name="thoiGian" />
+            </td>
+          </tr>
+          <tr>
+            <td class="form-label-add" >Trạng thái</td>
+            <td>
+              <input type="radio" name="status" id="active" />
+              <label for="active">Hoạt động</label>
+              <br>
+              <input type="radio" name="status" id="non-active" />
+              <label for="non-active">Không hoạt động</label>
+            </td>
+          </tr>         
+        </table>
+        <div class="customBtnAdd">
+          <div><button>Thêm mới</button></div>
+          <div class="btnCloseForm">Đóng</div>
+        </div>
+      </form>
+    </div>
+    <!-- CẬP NHẬT KHÓA HỌC -->
+    <div class="overlay update-form" id="update-form">
+      <form id="updateNew">
+        <table class="table-update">
+          <span class="modal-update">Cập nhật khóa học</span>
+          <span class="close-update">x</span>
+          <input type="hidden" id="updatedCourseId" value="1">
+          <tr>
+            <td class="form-label-update" >Mã khóa học</td>
+            <td>
+              <input type="text" placeholder="Nhập mã khóa học" name="editIdCourse" class="form-control" id="editIdCourse" required/>
+            </td>
+          </tr>
+          <tr>
+            <td class="form-label-update" >Tên khóa học</td>
+            <td>
+              <input type="text" placeholder="Nhập tên khóa học" name="editNameCourse" class="form-control" id="editNameCourse" required/>
+            </td>
+          </tr>
+          <tr>
+            <td class="form-label-update" >Thời gian</td>
+            <td>
+              <input type="text" placeholder="Nhập thời gian khóa học" name="editTimeCourse" class="form-control" required/>
+            </td>
+          </tr>
+          <tr>
+            <td class="form-label-update">Trạng thái</td>
+            <td>
+              <input type="radio" name="updateStatus" id="active" />
+              <label for="active">Hoạt động</label>
+              <input type="radio" name="updateStatus" id="nonActive"/>
+              <label for="nonActive">Không hoạt động</label>
+            </td>
+          </tr>
+        </table>
+        
+        <div class="customBtnUpdate">
+          <button type="submit">Cập nhật</button>
+          <div class="closeUpdate"><button>Đóng</button></div>
+        </div>
+      </form>
+    </div>
+    <!-- xóa khóa học -->
+
+    <div class="overlay delete-form" id="delete-form">
+      <form class="deleteNew">
+        <table class="table-delete">
+          <div class="label-delete">
+            <h5>Xác nhận xóa khóa học</h5>
+            <span type="button" class="close-delete">X</span>
+          </div>
+          <p id="delete-message">Bạn có chắc muốn xóa </p>
+          <div class="customBtnDelete">
+            <button type="submit">Có</button>
+            <button type="button" class="close-delete">Không</button>
+          </div>
+        </table>
+      </form>
+    </div>
+
+    
+    <div class="footer">Copyright Rikkei Academy @2023</div>
+    <script src="./src/utils/import-fake-data.js"></script>
+    <script src="./src/scripts/coursepage.js"></script>
+  </body>
+</html>
+
